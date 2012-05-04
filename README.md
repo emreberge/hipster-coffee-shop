@@ -21,6 +21,7 @@ Features
 ========
 * Only add a shop if the phone is connected to wifi
 * Auto add the wifi password to keychain (is it even possible)?
+* Rate the coffee shops higher if someone the user trusts has rated it. For example, the user probably trusts the people he/she is following on Twitter.
 
 Authors
 =======
