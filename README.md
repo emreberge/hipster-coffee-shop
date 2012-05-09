@@ -28,6 +28,11 @@ Features
 * Auto add the wifi password to keychain (is it even possible)?
 * Rate the coffee shops higher if someone the user trusts has rated it. For example, the user probably trusts the people he/she is following on Twitter.
 
+Planing
+-------
+
+![Planing](planing.jpg)
+
 Authors
 -------
 This project is created at [#SthlmStartupHack](http://startuplocation.com/hack) by @emreberge and @simlun
