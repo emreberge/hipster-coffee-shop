@@ -31,7 +31,7 @@ Features
 Planing
 -------
 
-![Planing](planing.jpg)
+![Planing](hipster-coffee-shop/raw/master/planing.jpg)
 
 Authors
 -------
