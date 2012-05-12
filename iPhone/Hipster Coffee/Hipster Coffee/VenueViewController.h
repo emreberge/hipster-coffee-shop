@@ -10,8 +10,6 @@
 
 
 #pragma mark - UI components
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *toggleEditModeButton;
-
 @property (weak, nonatomic) IBOutlet UITextField *wifiSSID;
 @property (weak, nonatomic) IBOutlet UITextField *wifiPassword;
 @property (weak, nonatomic) IBOutlet UITextField *coffeePrice;

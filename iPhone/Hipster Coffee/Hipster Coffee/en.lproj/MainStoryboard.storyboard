@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aqj-Da-4vi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aqj-Da-4vi">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
+        <deployment defaultVersion="1280" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -45,7 +44,6 @@
             </objects>
             <point key="canvasLocation" x="619" y="167"/>
         </scene>
-        <!--Add Venue Table View Controller-->
         <scene sceneID="sKW-4S-5vZ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6i-WH-afR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,7 +86,6 @@
             </objects>
             <point key="canvasLocation" x="1156" y="-282"/>
         </scene>
-        <!--Navigation Controller-->
         <scene sceneID="Z00-cS-tzf">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIv-lJ-OYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,7 +103,6 @@
             </objects>
             <point key="canvasLocation" x="186" y="168"/>
         </scene>
-        <!--Venue View Controller-->
         <scene sceneID="keG-lW-AQM">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2i-G0-cZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,7 +138,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Interwebs" textAlignment="right" minimumFontSize="17" id="3uo-N2-SjT">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="3uo-N2-SjT">
                                                     <rect key="frame" x="150" y="6" width="150" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -166,7 +162,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="secret" textAlignment="right" minimumFontSize="17" id="CbK-lG-MhE">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="CbK-lG-MhE">
                                                     <rect key="frame" x="142" y="6" width="158" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
@@ -190,7 +186,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="35" textAlignment="right" minimumFontSize="17" id="oTc-BA-j6l">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="oTc-BA-j6l">
                                                     <rect key="frame" x="150" y="6" width="150" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -245,18 +241,11 @@
                             <outlet property="delegate" destination="L0T-ai-XUH" id="EM6-m8-4cZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="q04-Ee-LbP">
-                        <barButtonItem key="rightBarButtonItem" title="Toggle Edit Mode" id="1zT-lk-cWJ">
-                            <connections>
-                                <action selector="toggleEditModeButtonPressed:" destination="L0T-ai-XUH" id="dro-wC-8uE"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="q04-Ee-LbP"/>
                     <connections>
                         <outlet property="coffeePrice" destination="oTc-BA-j6l" id="NFr-VK-KMk"/>
                         <outlet property="powerOutlets" destination="AfF-33-wf0" id="i6F-va-UHI"/>
                         <outlet property="powerOutletsLabel" destination="ZpW-dX-yGo" id="nbf-KG-8Az"/>
-                        <outlet property="toggleEditModeButton" destination="1zT-lk-cWJ" id="vuH-oU-DX1"/>
                         <outlet property="wifiPassword" destination="CbK-lG-MhE" id="JjL-oC-j7f"/>
                         <outlet property="wifiSSID" destination="3uo-N2-SjT" id="i1a-uA-G6D"/>
                     </connections>
@@ -281,7 +270,6 @@
                 <relationship kind="outlet" name="coffeePrice" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="powerOutlets" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="powerOutletsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="toggleEditModeButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="wifiPassword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="wifiSSID" candidateClass="UITextField"/>
             </relationships>

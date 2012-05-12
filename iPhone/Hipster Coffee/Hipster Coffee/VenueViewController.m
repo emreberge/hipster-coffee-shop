@@ -3,13 +3,13 @@
 #define kPowerOutletChoices [NSArray arrayWithObjects:@"Many", @"A Few", @"None", nil]
 
 @interface VenueViewController ()
+- (void) saveChangesToVenue;
 @end
 
 @implementation VenueViewController
 
 @synthesize editModeEnabled = _editModeEnabled;
 
-@synthesize toggleEditModeButton = _toggleEditModeButton;
 @synthesize wifiSSID = _wifiSSID;
 @synthesize wifiPassword = _wifiPassword;
 @synthesize coffeePrice = _coffeePrice;
@@ -23,7 +23,12 @@
 - (Venue *)venue
 {
     if (!_venue) {
-        self.venue = [[Venue alloc] init];
+        Venue *defaultVenue = [[Venue alloc] init];
+        defaultVenue.wifiSSID = @"eduroam";
+        defaultVenue.wifiPassword = @"secret";
+        defaultVenue.coffeePrice = @"4711";
+        defaultVenue.powerOutlets = @"A Few";
+        self.venue = defaultVenue;
     }
     return _venue;
 }
@@ -42,26 +47,8 @@
 
 #pragma mark - Edit mode logic
 
-- (void)setDefaultState
-{
-    self.editModeEnabled = NO;
-    
-    Venue *v = [[Venue alloc] init];
-    v.wifiSSID = @"eduroam";
-    v.wifiPassword = @"secret";
-    v.coffeePrice = @"4711";
-    v.powerOutlets = @"A Few";
-    self.venue = v;
-}
-
 - (void)updateControlsEditableState
 {
-    if (self.editModeEnabled) {
-        self.toggleEditModeButton.title = @"Save";
-    } else {
-        self.toggleEditModeButton.title = @"Edit";
-    }
-    
     self.wifiSSID.enabled = self.editModeEnabled;
     self.wifiPassword.enabled = self.editModeEnabled;
     self.coffeePrice.enabled = self.editModeEnabled;
@@ -69,6 +56,7 @@
         self.powerOutlets.alpha = self.editModeEnabled;
         self.powerOutletsLabel.alpha = !self.editModeEnabled;
     }];
+    self.navigationItem.rightBarButtonItem = self.editModeEnabled? [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(saveChangesToVenue)]: nil;
 }
 
 - (void)setEditModeEnabled:(BOOL)editModeEnabled
@@ -77,22 +65,18 @@
     [self updateControlsEditableState];
 }
 
-- (void)toggleEditMode
-{    
-    self.editModeEnabled = !self.editModeEnabled;
-    [self.wifiSSID becomeFirstResponder];
-}
-
 
 #pragma mark - UI Actions
-
-- (IBAction)toggleEditModeButtonPressed:(id)sender {
-    [self toggleEditMode];
-}
 
 - (IBAction)powerOutletsValueChanged:(id)sender {
     int selectedIndex = self.powerOutlets.selectedSegmentIndex;    
     self.powerOutletsLabel.text = [kPowerOutletChoices objectAtIndex:selectedIndex];
+}
+
+- (IBAction)saveChangesToVenue
+{
+    //[self.backEnd updateVenue:self.venue];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
@@ -101,7 +85,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setDefaultState];
+    [self updateControlsEditableState];
+    self.editModeEnabled = YES;
 }
 
 - (void)viewDidUnload
@@ -111,8 +96,14 @@
     [self setCoffeePrice:nil];
     [self setPowerOutlets:nil];
     [self setPowerOutletsLabel:nil];
-    [self setToggleEditModeButton:nil];
     [super viewDidUnload];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.editModeEnabled) {
+        [self.wifiSSID becomeFirstResponder];
+    }
 }
 
 
