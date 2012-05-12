@@ -4,5 +4,6 @@
 @interface BackEnd : NSObject
 
 - (void) processVenueListForLocation:(CLLocation *) location withBlock:(void (^)(NSArray *venues)) block;
+- (void) processNearbyVenuesAtLocation:(CLLocation *) location withBlock:(void(^)(NSArray *venues)) block;
 
 @end

@@ -1,128 +1,86 @@
-//
-//  AddVenueTableViewController.m
-//  Hipster Coffee
-//
-//  Created by Emre Ergenekon on 5/12/12.
-//  Copyright (c) 2012 Splunk, Bontouch AB, Codely HB. All rights reserved.
-//
-
 #import "AddVenueTableViewController.h"
+#import "BackEnd.h"
+#import "VenueViewController.h"
 
 @interface AddVenueTableViewController ()
-
+@property (strong, nonatomic) BackEnd *backEnd;
+@property (strong, nonatomic) NSArray *venues;
+- (void) updateVenuesForCurrentLocation;
 @end
 
 @implementation AddVenueTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+@synthesize backEnd=_backEnd;
+@synthesize venues=_venues;
+@synthesize location=_location;
+
+- (BackEnd *)backEnd
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
+    if(!_backEnd) {
+        _backEnd = [[BackEnd alloc] init];
     }
-    return self;
+    return _backEnd;
 }
 
-- (void)viewDidLoad
+- (void)setLocation:(CLLocation *)location
 {
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _location = location;
+    [self updateVenuesForCurrentLocation];
 }
 
-- (void)viewDidUnload
+- (void) setVenues:(NSArray *)venues
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    _venues = venues;
+    [self.tableView reloadData];
 }
+
+# pragma mark - ViewController lifecycle
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - Table view data source
+# pragma mark - Action
+
+- (void) updateVenuesForCurrentLocation
+{
+    if(self.location) {
+        [self.backEnd processNearbyVenuesAtLocation:self.location withBlock:^(NSArray *venues){
+            self.venues = venues;
+        }];
+    }
+}
+
+
+# pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 1;
+    return [self.venues count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = [[self.venues objectAtIndex:indexPath.row] title];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+# pragma mark - Segue mathods
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if([segue.destinationViewController isKindOfClass:[VenueViewController class]]) {
+        VenueViewController * venueViewController = ((VenueViewController *) segue.destinationViewController);
+        venueViewController.venue = [self.venues objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        [venueViewController setEditModeEnabled:YES];
+    }
 }
 
 @end

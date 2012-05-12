@@ -2,6 +2,7 @@
 #import "MapViewController.h"
 #import "BackEnd.h"
 #import "Venue.h"
+#import "AddVenueTableViewController.h"
 
 #define kLocationTrackingDinstance 100
 
@@ -87,6 +88,12 @@
 
 # pragma mark - Actions
 
+- (IBAction) updateVenuesAndAnimateToUserLocation
+{
+    [self updateVenues];
+    [self animateToUserLocation];
+}
+
 - (IBAction)updateVenues
 {
     
@@ -98,12 +105,6 @@
 - (IBAction)animateToUserLocation
 {
     [self.mapView setRegion:MKCoordinateRegionMake(self.locationManager.location.coordinate, MKCoordinateSpanMake(0.01,0.01)) animated:YES];
-}
-
-- (IBAction) updateVenuesAndAnimateToUserLocation
-{
-    [self updateVenues];
-    [self animateToUserLocation];
 }
 
 - (IBAction) showDetailsOfSelectedVenue
@@ -119,6 +120,15 @@
         }
     }
     [self.mapView addAnnotations:mapAnnotations];
+}
+
+# pragma mark - Segue mathods
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[AddVenueTableViewController class]]) {
+        ((AddVenueTableViewController *) segue.destinationViewController).location = self.locationManager.location;
+    }
 }
 
 # pragma mark - MKMapViewDelegate
