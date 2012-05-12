@@ -95,14 +95,20 @@
     }];
 }
 
-- (IBAction) showDetailsOfSelectedVenue
-{
-    [self performSegueWithIdentifier:@"ShowVenueView" sender:self];
-}
-
 - (IBAction)animateToUserLocation
 {
     [self.mapView setRegion:MKCoordinateRegionMake(self.locationManager.location.coordinate, MKCoordinateSpanMake(0.01,0.01)) animated:YES];
+}
+
+- (IBAction) updateVenuesAndAnimateToUserLocation
+{
+    [self updateVenues];
+    [self animateToUserLocation];
+}
+
+- (IBAction) showDetailsOfSelectedVenue
+{
+    [self performSegueWithIdentifier:@"ShowVenueView" sender:self];
 }
 
 - (void) replaceMapAnnotationsWith:(NSArray *) mapAnnotations
@@ -141,8 +147,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    [self updateVenues];
-    [self animateToUserLocation];
+    [self updateVenuesAndAnimateToUserLocation];
 }
 
 @end

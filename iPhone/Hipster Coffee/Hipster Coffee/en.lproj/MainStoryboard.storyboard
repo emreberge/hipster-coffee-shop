@@ -26,6 +26,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kkf-ZA-CIt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="VEy-yq-enh">
+                            <connections>
+                                <action selector="updateVenuesAndAnimateToUserLocation" destination="2" id="zBg-0G-H01"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mww-11-AGm">
                             <connections>
                                 <segue destination="tr6-4t-Y5y" kind="push" id="FeP-S7-Aws"/>
