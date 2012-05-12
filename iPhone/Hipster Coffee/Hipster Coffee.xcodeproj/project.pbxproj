@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
+		C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
+		C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB190155E37410004452D /* CoreGraphics.framework */; };
+		C3EBB197155E37410004452D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3EBB195155E37410004452D /* InfoPlist.strings */; };
+		C3EBB199155E37410004452D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB198155E37410004452D /* main.m */; };
+		C3EBB19D155E37410004452D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB19C155E37410004452D /* AppDelegate.m */; };
+		C3EBB1A0155E37410004452D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBB19E155E37410004452D /* MainStoryboard.storyboard */; };
+		C3EBB1A3155E37410004452D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB1A2155E37410004452D /* ViewController.m */; };
+		C3EBB1AB155E37410004452D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB1AA155E37410004452D /* SenTestingKit.framework */; };
+		C3EBB1AC155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
+		C3EBB1AD155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
+		C3EBB1B5155E37410004452D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3EBB1B3155E37410004452D /* InfoPlist.strings */; };
+		C3EBB1B8155E37410004452D /* Hipster_CoffeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB1B7155E37410004452D /* Hipster_CoffeeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3EBB1AE155E37410004452D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3EBB17F155E37410004452D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3EBB187155E37410004452D;
+			remoteInfo = "Hipster Coffee";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3EBB188155E37410004452D /* Hipster Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hipster Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBB18C155E37410004452D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3EBB18E155E37410004452D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3EBB190155E37410004452D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3EBB194155E37410004452D /* Hipster Coffee-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hipster Coffee-Info.plist"; sourceTree = "<group>"; };
+		C3EBB196155E37410004452D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3EBB198155E37410004452D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3EBB19A155E37410004452D /* Hipster Coffee-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hipster Coffee-Prefix.pch"; sourceTree = "<group>"; };
+		C3EBB19B155E37410004452D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C3EBB19C155E37410004452D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C3EBB19F155E37410004452D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C3EBB1A1155E37410004452D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3EBB1A2155E37410004452D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C3EBB1A9155E37410004452D /* Hipster CoffeeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hipster CoffeeTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBB1AA155E37410004452D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C3EBB1B2155E37410004452D /* Hipster CoffeeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hipster CoffeeTests-Info.plist"; sourceTree = "<group>"; };
+		C3EBB1B4155E37410004452D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3EBB1B6155E37410004452D /* Hipster_CoffeeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hipster_CoffeeTests.h; sourceTree = "<group>"; };
+		C3EBB1B7155E37410004452D /* Hipster_CoffeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hipster_CoffeeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3EBB185155E37410004452D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */,
+				C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */,
+				C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBB1A5155E37410004452D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBB1AB155E37410004452D /* SenTestingKit.framework in Frameworks */,
+				C3EBB1AC155E37410004452D /* UIKit.framework in Frameworks */,
+				C3EBB1AD155E37410004452D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3EBB17D155E37410004452D = {
+			isa = PBXGroup;
+			children = (
+				C3EBB192155E37410004452D /* Hipster Coffee */,
+				C3EBB1B0155E37410004452D /* Hipster CoffeeTests */,
+				C3EBB18B155E37410004452D /* Frameworks */,
+				C3EBB189155E37410004452D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3EBB189155E37410004452D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBB188155E37410004452D /* Hipster Coffee.app */,
+				C3EBB1A9155E37410004452D /* Hipster CoffeeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3EBB18B155E37410004452D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBB18C155E37410004452D /* UIKit.framework */,
+				C3EBB18E155E37410004452D /* Foundation.framework */,
+				C3EBB190155E37410004452D /* CoreGraphics.framework */,
+				C3EBB1AA155E37410004452D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3EBB192155E37410004452D /* Hipster Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBB19B155E37410004452D /* AppDelegate.h */,
+				C3EBB19C155E37410004452D /* AppDelegate.m */,
+				C3EBB19E155E37410004452D /* MainStoryboard.storyboard */,
+				C3EBB1A1155E37410004452D /* ViewController.h */,
+				C3EBB1A2155E37410004452D /* ViewController.m */,
+				C3EBB193155E37410004452D /* Supporting Files */,
+			);
+			path = "Hipster Coffee";
+			sourceTree = "<group>";
+		};
+		C3EBB193155E37410004452D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBB194155E37410004452D /* Hipster Coffee-Info.plist */,
+				C3EBB195155E37410004452D /* InfoPlist.strings */,
+				C3EBB198155E37410004452D /* main.m */,
+				C3EBB19A155E37410004452D /* Hipster Coffee-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3EBB1B0155E37410004452D /* Hipster CoffeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBB1B6155E37410004452D /* Hipster_CoffeeTests.h */,
+				C3EBB1B7155E37410004452D /* Hipster_CoffeeTests.m */,
+				C3EBB1B1155E37410004452D /* Supporting Files */,
+			);
+			path = "Hipster CoffeeTests";
+			sourceTree = "<group>";
+		};
+		C3EBB1B1155E37410004452D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBB1B2155E37410004452D /* Hipster CoffeeTests-Info.plist */,
+				C3EBB1B3155E37410004452D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3EBB187155E37410004452D /* Hipster Coffee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3EBB1BB155E37410004452D /* Build configuration list for PBXNativeTarget "Hipster Coffee" */;
+			buildPhases = (
+				C3EBB184155E37410004452D /* Sources */,
+				C3EBB185155E37410004452D /* Frameworks */,
+				C3EBB186155E37410004452D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hipster Coffee";
+			productName = "Hipster Coffee";
+			productReference = C3EBB188155E37410004452D /* Hipster Coffee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3EBB1A8155E37410004452D /* Hipster CoffeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3EBB1BE155E37410004452D /* Build configuration list for PBXNativeTarget "Hipster CoffeeTests" */;
+			buildPhases = (
+				C3EBB1A4155E37410004452D /* Sources */,
+				C3EBB1A5155E37410004452D /* Frameworks */,
+				C3EBB1A6155E37410004452D /* Resources */,
+				C3EBB1A7155E37410004452D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EBB1AF155E37410004452D /* PBXTargetDependency */,
+			);
+			name = "Hipster CoffeeTests";
+			productName = "Hipster CoffeeTests";
+			productReference = C3EBB1A9155E37410004452D /* Hipster CoffeeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3EBB17F155E37410004452D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Splunk, Bontouch AB, Codely HB";
+			};
+			buildConfigurationList = C3EBB182155E37410004452D /* Build configuration list for PBXProject "Hipster Coffee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3EBB17D155E37410004452D;
+			productRefGroup = C3EBB189155E37410004452D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3EBB187155E37410004452D /* Hipster Coffee */,
+				C3EBB1A8155E37410004452D /* Hipster CoffeeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3EBB186155E37410004452D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBB197155E37410004452D /* InfoPlist.strings in Resources */,
+				C3EBB1A0155E37410004452D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBB1A6155E37410004452D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBB1B5155E37410004452D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3EBB1A7155E37410004452D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3EBB184155E37410004452D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBB199155E37410004452D /* main.m in Sources */,
+				C3EBB19D155E37410004452D /* AppDelegate.m in Sources */,
+				C3EBB1A3155E37410004452D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBB1A4155E37410004452D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBB1B8155E37410004452D /* Hipster_CoffeeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3EBB1AF155E37410004452D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3EBB187155E37410004452D /* Hipster Coffee */;
+			targetProxy = C3EBB1AE155E37410004452D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3EBB195155E37410004452D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3EBB196155E37410004452D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3EBB19E155E37410004452D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3EBB19F155E37410004452D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		C3EBB1B3155E37410004452D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3EBB1B4155E37410004452D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3EBB1B9155E37410004452D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3EBB1BA155E37410004452D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3EBB1BC155E37410004452D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hipster Coffee/Hipster Coffee-Prefix.pch";
+				INFOPLIST_FILE = "Hipster Coffee/Hipster Coffee-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3EBB1BD155E37410004452D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hipster Coffee/Hipster Coffee-Prefix.pch";
+				INFOPLIST_FILE = "Hipster Coffee/Hipster Coffee-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C3EBB1BF155E37410004452D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hipster Coffee.app/Hipster Coffee";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hipster Coffee/Hipster Coffee-Prefix.pch";
+				INFOPLIST_FILE = "Hipster CoffeeTests/Hipster CoffeeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C3EBB1C0155E37410004452D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hipster Coffee.app/Hipster Coffee";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hipster Coffee/Hipster Coffee-Prefix.pch";
+				INFOPLIST_FILE = "Hipster CoffeeTests/Hipster CoffeeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3EBB182155E37410004452D /* Build configuration list for PBXProject "Hipster Coffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EBB1B9155E37410004452D /* Debug */,
+				C3EBB1BA155E37410004452D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3EBB1BB155E37410004452D /* Build configuration list for PBXNativeTarget "Hipster Coffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EBB1BC155E37410004452D /* Debug */,
+				C3EBB1BD155E37410004452D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3EBB1BE155E37410004452D /* Build configuration list for PBXNativeTarget "Hipster CoffeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EBB1BF155E37410004452D /* Debug */,
+				C3EBB1C0155E37410004452D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3EBB17F155E37410004452D /* Project object */;
+}
