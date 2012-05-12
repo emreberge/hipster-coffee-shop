@@ -1,0 +1,49 @@
+{
+    "venues": [
+               {
+               "latitude": 59.31272282045062,
+               "longitude": 18.081099755570595,
+               "name": "Il Caffè"
+               },
+               {
+               "latitude": 59.33959193,
+               "longitude": 18.068394,
+               "name": "Café Saturnus"
+               },
+               {
+               "latitude": 59.33899,
+               "longitude": 18.068094,
+               "name": "Vurma"
+               },
+               {
+               "latitude": 59.32988406516725,
+               "longitude": 18.042941093444824,
+               "name": "Il Caffè"
+               },
+               {
+               "latitude": 59.33541653350178,
+               "longitude": 18.071200847625732,
+               "name": "Bianchi Café & Cycles"
+               },
+               {
+               "latitude": 59.33362719869237,
+               "longitude": 18.077563047409058,
+               "name": "Café Tidemans"
+               },
+               {
+               "latitude": 59.323872,
+               "longitude": 18.06973,
+               "name": "Cafe Dox"
+               },
+               {
+               "latitude": 59.3254744,
+               "longitude": 18.0688691,
+               "name": "Cafe Gråmunken"
+               },
+               {
+               "latitude": 59.31817042830155,
+               "longitude": 18.06551456451416,
+               "name": "Café Sodom"
+               }
+               ]
+}

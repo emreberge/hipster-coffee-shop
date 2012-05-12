@@ -11,6 +11,10 @@
 		C31AC604155E4881000708CE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC603155E4881000708CE /* MapViewController.m */; };
 		C31AC609155E4AF4000708CE /* AddVenueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC608155E4AF4000708CE /* AddVenueTableViewController.m */; };
 		C31AC60E155E4CCA000708CE /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC60C155E4CCA000708CE /* VenueViewController.m */; };
+		C31AC61C155E5D76000708CE /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC61B155E5D76000708CE /* Venue.m */; };
+		C31AC61F155E6471000708CE /* BackEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC61E155E6471000708CE /* BackEnd.m */; };
+		C384FF2B155E739F00381D99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C384FF2A155E739F00381D99 /* CoreLocation.framework */; };
+		C3EB3911155E8B480095F771 /* ExampleVenueList.json in Resources */ = {isa = PBXBuildFile; fileRef = C3EB3910155E8B480095F771 /* ExampleVenueList.json */; };
 		C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
 		C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
 		C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB190155E37410004452D /* CoreGraphics.framework */; };
@@ -43,6 +47,12 @@
 		C31AC608155E4AF4000708CE /* AddVenueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVenueTableViewController.m; sourceTree = "<group>"; };
 		C31AC60B155E4CCA000708CE /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
 		C31AC60C155E4CCA000708CE /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
+		C31AC61A155E5D76000708CE /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		C31AC61B155E5D76000708CE /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		C31AC61D155E6471000708CE /* BackEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackEnd.h; sourceTree = "<group>"; };
+		C31AC61E155E6471000708CE /* BackEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackEnd.m; sourceTree = "<group>"; };
+		C384FF2A155E739F00381D99 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C3EB3910155E8B480095F771 /* ExampleVenueList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExampleVenueList.json; sourceTree = "<group>"; };
 		C3EBB188155E37410004452D /* Hipster Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hipster Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBB18C155E37410004452D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3EBB18E155E37410004452D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C384FF2B155E739F00381D99 /* CoreLocation.framework in Frameworks */,
 				C31AC601155E4850000708CE /* MapKit.framework in Frameworks */,
 				C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */,
 				C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */,
@@ -114,6 +125,17 @@
 			name = "Venue View";
 			sourceTree = "<group>";
 		};
+		C31AC619155E5D54000708CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C31AC61A155E5D76000708CE /* Venue.h */,
+				C31AC61B155E5D76000708CE /* Venue.m */,
+				C31AC61D155E6471000708CE /* BackEnd.h */,
+				C31AC61E155E6471000708CE /* BackEnd.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C3EBB17D155E37410004452D = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +159,7 @@
 		C3EBB18B155E37410004452D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C384FF2A155E739F00381D99 /* CoreLocation.framework */,
 				C31AC600155E4850000708CE /* MapKit.framework */,
 				C3EBB18C155E37410004452D /* UIKit.framework */,
 				C3EBB18E155E37410004452D /* Foundation.framework */,
@@ -155,6 +178,7 @@
 				C31AC605155E4885000708CE /* Map View */,
 				C31AC606155E4A8F000708CE /* Add Venue List View */,
 				C31AC60A155E4CA5000708CE /* Venue View */,
+				C31AC619155E5D54000708CE /* Models */,
 			);
 			path = "Hipster Coffee";
 			sourceTree = "<group>";
@@ -166,6 +190,7 @@
 				C3EBB195155E37410004452D /* InfoPlist.strings */,
 				C3EBB198155E37410004452D /* main.m */,
 				C3EBB19A155E37410004452D /* Hipster Coffee-Prefix.pch */,
+				C3EB3910155E8B480095F771 /* ExampleVenueList.json */,
 			);
 			name = "Supporting Files";
 			path = "Hipster Coffee";
@@ -263,6 +288,7 @@
 			files = (
 				C3EBB197155E37410004452D /* InfoPlist.strings in Resources */,
 				C3EBB1A0155E37410004452D /* MainStoryboard.storyboard in Resources */,
+				C3EB3911155E8B480095F771 /* ExampleVenueList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +328,8 @@
 				C31AC604155E4881000708CE /* MapViewController.m in Sources */,
 				C31AC609155E4AF4000708CE /* AddVenueTableViewController.m in Sources */,
 				C31AC60E155E4CCA000708CE /* VenueViewController.m in Sources */,
+				C31AC61C155E5D76000708CE /* Venue.m in Sources */,
+				C31AC61F155E6471000708CE /* BackEnd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
