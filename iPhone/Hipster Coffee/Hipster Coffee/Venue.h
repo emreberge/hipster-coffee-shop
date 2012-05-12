@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSString *wifiPassword;
 @property (nonatomic, strong) NSString *coffeePrice;
 @property (nonatomic, strong) NSString *powerOutlets;
+@property (nonatomic, strong) NSString *streetAddress;
 
 @end

@@ -11,6 +11,8 @@
 @property (strong, nonatomic) CLLocationManager * locationManager;
 - (void) initLocationManager;
 - (void) replaceMapAnnotationsWith:(NSArray *) mapAnnotations;
+- (IBAction)updateVenues;
+- (IBAction)animateToUserLocation;
 @end
 
 @implementation MapViewController

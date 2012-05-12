@@ -59,6 +59,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.textLabel.text = [[self.venues objectAtIndex:indexPath.row] title];
+    cell.detailTextLabel.text = [[self.venues objectAtIndex:indexPath.row] streetAddress];
     return cell;
 }
 

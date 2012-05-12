@@ -41,6 +41,10 @@
 {
     return [self valueForKey:@"power_outlets" or:@"None"];
 }
+- (NSString *)streetAddress
+{
+    return [self valueForKey:@"address" or:@""];
+}
 
 - (NSString *) valueForKey:(NSString *)key or:(NSString *) defaultValue
 {
@@ -71,6 +75,10 @@
 {
     [self.venueJson setObject:powerOutlets forKey:@"power_outlets"];
 }
+- (void)setStreetAddress:(NSString *)streetAddress
+{
+    [self.venueJson setObject:streetAddress forKey:@"address"];
+}
 
 # pragma mark - MKAnnotation properties
 
@@ -85,6 +93,11 @@
 - (NSString *)title
 {
     return [self.venueJson objectForKey:@"name"];
+}
+
+- (NSString *)subtitle
+{
+    return self.streetAddress;
 }
 
 # pragma mark Class Methods
