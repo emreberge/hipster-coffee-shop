@@ -1,7 +1,7 @@
 #import "Venue.h"
 
 @interface Venue()
-@property(nonatomic) id venueJson;
+@property(nonatomic, strong) id venueJson;
 @end
 
 

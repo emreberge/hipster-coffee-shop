@@ -13,6 +13,11 @@
 @end
 
 @implementation VenueViewController
+@synthesize saveButton;
+@synthesize wifiSSID;
+@synthesize wifiPassword;
+@synthesize coffeePrice;
+@synthesize powerOutlets;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,6 +41,11 @@
 
 - (void)viewDidUnload
 {
+    [self setWifiSSID:nil];
+    [self setWifiPassword:nil];
+    [self setCoffeePrice:nil];
+    [self setPowerOutlets:nil];
+    [self setSaveButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -6,8 +6,10 @@
 #define kLocationTrackingDinstance 100
 
 @interface MapViewController ()
-@property (nonatomic) CLLocationManager * locationManager;
-@property (nonatomic) BackEnd *backEnd;
+@property (strong, nonatomic) CLLocationManager * locationManager;
+@property (strong, nonatomic) BackEnd *backEnd;
+- (void) initLocationManager;
+- (void) replaceMapAnnotationsWith:(NSArray *) mapAnnotations;
 @end
 
 @implementation MapViewController
