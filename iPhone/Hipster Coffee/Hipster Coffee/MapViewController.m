@@ -93,6 +93,11 @@
     }];
 }
 
+- (IBAction)animateToUserLocation
+{
+    [self.mapView setRegion:MKCoordinateRegionMake(self.locationManager.location.coordinate, MKCoordinateSpanMake(0.01,0.01)) animated:YES];
+}
+
 - (void) replaceMapAnnotationsWith:(NSArray *) mapAnnotations
 {
     for (id annotation in self.mapView.annotations) {
@@ -110,6 +115,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     [self updateVenues];
+    [self animateToUserLocation];
 }
 
 @end
