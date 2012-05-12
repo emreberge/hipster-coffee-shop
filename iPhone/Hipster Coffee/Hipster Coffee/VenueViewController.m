@@ -123,6 +123,7 @@
 		imageView.frame = rect;
         imageView.tag = i+1;
         imageView.contentMode = UIViewContentModeScaleAspectFit | UIViewContentModeCenter;
+        imageView.clipsToBounds = YES;
         [self.imageScrollView addSubview:imageView];
     }
     
