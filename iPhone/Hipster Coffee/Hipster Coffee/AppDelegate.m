@@ -7,6 +7,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"headerbg"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor brownColor]];
+    
     return YES;
 }
 							

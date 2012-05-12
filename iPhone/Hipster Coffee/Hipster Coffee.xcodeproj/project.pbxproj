@@ -30,6 +30,8 @@
 		C3EBB1AD155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
 		C3EBB1B5155E37410004452D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3EBB1B3155E37410004452D /* InfoPlist.strings */; };
 		C3EBB1B8155E37410004452D /* Hipster_CoffeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB1B7155E37410004452D /* Hipster_CoffeeTests.m */; };
+		FD7F5EDD155EDD15000167D2 /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7F5EDC155EDD15000167D2 /* header@2x.png */; };
+		FD7F5EDF155EDD82000167D2 /* headerbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7F5EDE155EDD82000167D2 /* headerbg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		C3EBB1B4155E37410004452D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3EBB1B6155E37410004452D /* Hipster_CoffeeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hipster_CoffeeTests.h; sourceTree = "<group>"; };
 		C3EBB1B7155E37410004452D /* Hipster_CoffeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hipster_CoffeeTests.m; sourceTree = "<group>"; };
+		FD7F5EDC155EDD15000167D2 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header@2x.png"; sourceTree = "<group>"; };
+		FD7F5EDE155EDD82000167D2 /* headerbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headerbg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 		C3EBB193155E37410004452D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD7F5EDE155EDD82000167D2 /* headerbg@2x.png */,
+				FD7F5EDC155EDD15000167D2 /* header@2x.png */,
 				C3EBB194155E37410004452D /* Hipster Coffee-Info.plist */,
 				C3EBB195155E37410004452D /* InfoPlist.strings */,
 				C3EBB198155E37410004452D /* main.m */,
@@ -301,6 +307,8 @@
 				C3EB3926155ED9010095F771 /* image3.jpg in Resources */,
 				C3EB3927155ED9010095F771 /* image2.jpg in Resources */,
 				C3EB3928155ED9010095F771 /* image1.jpg in Resources */,
+				FD7F5EDD155EDD15000167D2 /* header@2x.png in Resources */,
+				FD7F5EDF155EDD82000167D2 /* headerbg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

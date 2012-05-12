@@ -25,7 +25,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hipster Coffee Shops" id="Kkf-ZA-CIt">
+                    <navigationItem key="navigationItem" id="Kkf-ZA-CIt">
                         <barButtonItem key="backBarButtonItem" title="Map" id="zGW-Ua-jd0"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="VEy-yq-enh">
                             <connections>
@@ -320,6 +320,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="EnO-8J-25y"/>
+        <segue reference="H95-z9-Y05"/>
     </inferredMetricsTieBreakers>
 </document>

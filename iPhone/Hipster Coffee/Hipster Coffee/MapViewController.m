@@ -60,6 +60,12 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setNeedsDisplay];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

@@ -171,6 +171,12 @@
     [super viewDidUnload];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"headerbg"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setNeedsDisplay];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     if (self.editModeEnabled) {
