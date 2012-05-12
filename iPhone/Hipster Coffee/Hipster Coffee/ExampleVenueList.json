@@ -1,49 +1,103 @@
 {
     "venues": [
                {
+               "foursquare_id": "4ca5a42176d3a09301a6f96a",
                "latitude": 59.31272282045062,
                "longitude": 18.081099755570595,
-               "name": "Il Caffè"
+               "name": "Il Caffè",
+               "address": "Södermannagatan 23", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4b16f58ff964a52023c023e3",
                "latitude": 59.33959193,
                "longitude": 18.068394,
-               "name": "Café Saturnus"
+               "name": "Café Saturnus",
+               "address": "Eriksbergsgatan 6", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4b0d67fbf964a520a54723e3",
                "latitude": 59.33899,
                "longitude": 18.068094,
-               "name": "Vurma"
+               "name": "Vurma",
+               "address": "Birger jarlsgatan 36", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4b0014e5f964a520ad3a22e3",
                "latitude": 59.32988406516725,
                "longitude": 18.042941093444824,
-               "name": "Il Caffè"
+               "name": "Il Caffè",
+               "address": "Bergsgatan 17", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4cc81c297722bfb71c65a2fa",
                "latitude": 59.33541653350178,
                "longitude": 18.071200847625732,
-               "name": "Bianchi Café & Cycles"
+               "name": "Bianchi Café & Cycles",
+               "address": "Norrlandsgatan 20", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4bae0bb4f964a520407e3be3",
                "latitude": 59.33362719869237,
                "longitude": 18.077563047409058,
-               "name": "Café Tidemans"
+               "name": "Café Tidemans",
+               "address": "Almlöfsgatan 3", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4b4f5698f964a520f60127e3",
                "latitude": 59.323872,
                "longitude": 18.06973,
-               "name": "Cafe Dox"
+               "name": "Cafe Dox",
+               "address": "Stora Nygatan 31", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4adcdaecf964a5200f5a21e3",
                "latitude": 59.3254744,
                "longitude": 18.0688691,
-               "name": "Cafe Gråmunken"
+               "name": "Cafe Gråmunken",
+               "address": "Västerlånggatan 18", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                },
                {
+               "foursquare_id": "4bb9ec097421a5933127c340",
                "latitude": 59.31817042830155,
                "longitude": 18.06551456451416,
-               "name": "Café Sodom"
+               "name": "Café Sodom",
+               "address": "Bellmansgatan 26", 
+               "wifi_ssid": "", 
+               "wifi_password": "", 
+               "coffee_price": "", 
+               "power_outlets": ""
                }
                ]
 }

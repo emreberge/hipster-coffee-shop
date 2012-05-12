@@ -21,6 +21,10 @@
     return self;
 }
 
+- (NSString *)foursquareID
+{
+    return [self valueForKey:@"foursquare_id" or:@""];
+}
 - (NSString *)wifiSSID
 {
     return [self valueForKey:@"wifi_ssid" or:@""];
@@ -47,6 +51,10 @@
     return value;
 }
 
+- (void)setFoursquareID:(NSString *)foursquareID
+{
+    [self.venueJson setObject:foursquareID forKey:@"foursquare_id"];
+}
 - (void)setWifiSSID:(NSString *)wifiSSID
 {
     [self.venueJson setObject:wifiSSID forKey:@"wifi_ssid"];

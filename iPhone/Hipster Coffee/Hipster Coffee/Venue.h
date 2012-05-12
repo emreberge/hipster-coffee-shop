@@ -13,6 +13,7 @@
 
 @property(nonatomic, strong) id venueJson;
 
+@property (nonatomic, strong) NSString *foursquareID;
 @property (nonatomic, strong) NSString *wifiSSID;
 @property (nonatomic, strong) NSString *wifiPassword;
 @property (nonatomic, strong) NSString *coffeePrice;
