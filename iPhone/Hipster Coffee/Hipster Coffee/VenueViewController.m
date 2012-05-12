@@ -3,7 +3,8 @@
 #define kPowerOutletChoices [NSArray arrayWithObjects:@"Many", @"A Few", @"None", nil]
 
 @interface VenueViewController ()
-- (void) saveChangesToVenue;
+- (IBAction) saveChangesToVenue;
+- (IBAction) updateViewForCurrentVenue;
 @end
 
 @implementation VenueViewController
@@ -35,13 +36,7 @@
 - (void)setVenue:(Venue *)venue
 {
     _venue = venue;
-    
-    self.wifiSSID.text = venue.wifiSSID;
-    self.wifiPassword.text = venue.wifiPassword;
-    self.coffeePrice.text = venue.coffeePrice;
-
-    self.powerOutletsLabel.text = venue.powerOutlets;
-    self.powerOutlets.selectedSegmentIndex = [kPowerOutletChoices indexOfObject:venue.powerOutlets];
+    [self updateViewForCurrentVenue];
 }
 
 
@@ -79,6 +74,16 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)updateViewForCurrentVenue
+{
+    self.wifiSSID.text = self.venue.wifiSSID;
+    self.wifiPassword.text = self.venue.wifiPassword;
+    self.coffeePrice.text = self.venue.coffeePrice;
+    self.powerOutletsLabel.text = self.venue.powerOutlets;
+    self.powerOutlets.selectedSegmentIndex = [kPowerOutletChoices indexOfObject:self.venue.powerOutlets];
+    self.title = self.venue.title;
+}
+
 
 #pragma mark - View lifecycle
 
@@ -86,7 +91,7 @@
 {
     [super viewDidLoad];
     [self updateControlsEditableState];
-    self.editModeEnabled = YES;
+    [self updateViewForCurrentVenue];
 }
 
 - (void)viewDidUnload
