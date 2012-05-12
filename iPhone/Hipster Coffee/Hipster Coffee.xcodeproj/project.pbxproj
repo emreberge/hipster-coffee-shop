@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C31AC601155E4850000708CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31AC600155E4850000708CE /* MapKit.framework */; };
+		C31AC604155E4881000708CE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC603155E4881000708CE /* MapViewController.m */; };
 		C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
 		C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
 		C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB190155E37410004452D /* CoreGraphics.framework */; };
@@ -15,7 +16,6 @@
 		C3EBB199155E37410004452D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB198155E37410004452D /* main.m */; };
 		C3EBB19D155E37410004452D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB19C155E37410004452D /* AppDelegate.m */; };
 		C3EBB1A0155E37410004452D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBB19E155E37410004452D /* MainStoryboard.storyboard */; };
-		C3EBB1A3155E37410004452D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBB1A2155E37410004452D /* ViewController.m */; };
 		C3EBB1AB155E37410004452D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB1AA155E37410004452D /* SenTestingKit.framework */; };
 		C3EBB1AC155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
 		C3EBB1AD155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
@@ -35,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		C31AC600155E4850000708CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C31AC602155E4881000708CE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C31AC603155E4881000708CE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C3EBB188155E37410004452D /* Hipster Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hipster Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBB18C155E37410004452D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3EBB18E155E37410004452D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,8 +48,6 @@
 		C3EBB19B155E37410004452D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3EBB19C155E37410004452D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C3EBB19F155E37410004452D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C3EBB1A1155E37410004452D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C3EBB1A2155E37410004452D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C3EBB1A9155E37410004452D /* Hipster CoffeeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hipster CoffeeTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBB1AA155E37410004452D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C3EBB1B2155E37410004452D /* Hipster CoffeeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hipster CoffeeTests-Info.plist"; sourceTree = "<group>"; };
@@ -81,10 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31AC605155E4885000708CE /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				C31AC602155E4881000708CE /* MapViewController.h */,
+				C31AC603155E4881000708CE /* MapViewController.m */,
+			);
+			name = "Map View";
+			sourceTree = "<group>";
+		};
 		C3EBB17D155E37410004452D = {
 			isa = PBXGroup;
 			children = (
 				C3EBB192155E37410004452D /* Hipster Coffee */,
+				C3EBB193155E37410004452D /* Supporting Files */,
 				C3EBB1B0155E37410004452D /* Hipster CoffeeTests */,
 				C3EBB18B155E37410004452D /* Frameworks */,
 				C3EBB189155E37410004452D /* Products */,
@@ -118,9 +128,7 @@
 				C3EBB19B155E37410004452D /* AppDelegate.h */,
 				C3EBB19C155E37410004452D /* AppDelegate.m */,
 				C3EBB19E155E37410004452D /* MainStoryboard.storyboard */,
-				C3EBB1A1155E37410004452D /* ViewController.h */,
-				C3EBB1A2155E37410004452D /* ViewController.m */,
-				C3EBB193155E37410004452D /* Supporting Files */,
+				C31AC605155E4885000708CE /* Map View */,
 			);
 			path = "Hipster Coffee";
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 				C3EBB19A155E37410004452D /* Hipster Coffee-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = "Hipster Coffee";
 			sourceTree = "<group>";
 		};
 		C3EBB1B0155E37410004452D /* Hipster CoffeeTests */ = {
@@ -264,7 +273,7 @@
 			files = (
 				C3EBB199155E37410004452D /* main.m in Sources */,
 				C3EBB19D155E37410004452D /* AppDelegate.m in Sources */,
-				C3EBB1A3155E37410004452D /* ViewController.m in Sources */,
+				C31AC604155E4881000708CE /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
