@@ -3,6 +3,7 @@
 #import "BackEnd.h"
 #import "Venue.h"
 #import "AddVenueTableViewController.h"
+#import "VenueViewController.h"
 
 #define kLocationTrackingDinstance 100
 
@@ -128,6 +129,9 @@
 {
     if([segue.destinationViewController isKindOfClass:[AddVenueTableViewController class]]) {
         ((AddVenueTableViewController *) segue.destinationViewController).location = self.locationManager.location;
+    } else if([segue.destinationViewController isKindOfClass:[VenueViewController class]]) {
+            VenueViewController * venueViewController = ((VenueViewController *) segue.destinationViewController);
+            venueViewController.venue = [[self.mapView selectedAnnotations] lastObject];
     }
 }
 
