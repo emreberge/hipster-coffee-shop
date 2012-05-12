@@ -15,6 +15,9 @@
 		C31AC61F155E6471000708CE /* BackEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC61E155E6471000708CE /* BackEnd.m */; };
 		C384FF2B155E739F00381D99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C384FF2A155E739F00381D99 /* CoreLocation.framework */; };
 		C3EB3911155E8B480095F771 /* ExampleVenueList.json in Resources */ = {isa = PBXBuildFile; fileRef = C3EB3910155E8B480095F771 /* ExampleVenueList.json */; };
+		C3EB3926155ED9010095F771 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3EB3923155ED9010095F771 /* image3.jpg */; };
+		C3EB3927155ED9010095F771 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3EB3924155ED9010095F771 /* image2.jpg */; };
+		C3EB3928155ED9010095F771 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3EB3925155ED9010095F771 /* image1.jpg */; };
 		C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
 		C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
 		C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB190155E37410004452D /* CoreGraphics.framework */; };
@@ -53,6 +56,9 @@
 		C31AC61E155E6471000708CE /* BackEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackEnd.m; sourceTree = "<group>"; };
 		C384FF2A155E739F00381D99 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C3EB3910155E8B480095F771 /* ExampleVenueList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExampleVenueList.json; sourceTree = "<group>"; };
+		C3EB3923155ED9010095F771 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		C3EB3924155ED9010095F771 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		C3EB3925155ED9010095F771 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		C3EBB188155E37410004452D /* Hipster Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hipster Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBB18C155E37410004452D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3EBB18E155E37410004452D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,6 +197,9 @@
 				C3EBB198155E37410004452D /* main.m */,
 				C3EBB19A155E37410004452D /* Hipster Coffee-Prefix.pch */,
 				C3EB3910155E8B480095F771 /* ExampleVenueList.json */,
+				C3EB3923155ED9010095F771 /* image3.jpg */,
+				C3EB3924155ED9010095F771 /* image2.jpg */,
+				C3EB3925155ED9010095F771 /* image1.jpg */,
 			);
 			name = "Supporting Files";
 			path = "Hipster Coffee";
@@ -289,6 +298,9 @@
 				C3EBB197155E37410004452D /* InfoPlist.strings in Resources */,
 				C3EBB1A0155E37410004452D /* MainStoryboard.storyboard in Resources */,
 				C3EB3911155E8B480095F771 /* ExampleVenueList.json in Resources */,
+				C3EB3926155ED9010095F771 /* image3.jpg in Resources */,
+				C3EB3927155ED9010095F771 /* image2.jpg in Resources */,
+				C3EB3928155ED9010095F771 /* image1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

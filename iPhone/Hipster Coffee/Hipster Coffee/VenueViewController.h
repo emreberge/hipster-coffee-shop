@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *powerOutlets;
 @property (weak, nonatomic) IBOutlet UILabel *powerOutletsLabel;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray * imageViews;
 
 @end
