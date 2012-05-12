@@ -1,18 +1,18 @@
 //
-//  AddVenueTableViewController.m
+//  VenueViewController.m
 //  Hipster Coffee
 //
 //  Created by Emre Ergenekon on 5/12/12.
 //  Copyright (c) 2012 Splunk, Bontouch AB, Codely HB. All rights reserved.
 //
 
-#import "AddVenueTableViewController.h"
+#import "VenueViewController.h"
 
-@interface AddVenueTableViewController ()
+@interface VenueViewController ()
 
 @end
 
-@implementation AddVenueTableViewController
+@implementation VenueViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -47,31 +47,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    
-    // Configure the cell...
-    
-    return cell;
-}
 
 /*
 // Override to support conditional editing of the table view.
