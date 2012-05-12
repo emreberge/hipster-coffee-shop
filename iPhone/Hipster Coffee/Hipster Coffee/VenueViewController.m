@@ -1,5 +1,9 @@
 #import "VenueViewController.h"
 
+#define kPowerOutletsMany 0
+#define kPowerOutletsAFew 1
+#define kPowerOutletsNone 2
+
 @interface VenueViewController ()
 
 @end
@@ -60,7 +64,21 @@
 }
 
 - (IBAction)powerOutletsValueChanged:(id)sender {
-    //self.powerOutletsLabel.text = self.powerOutlets.
+    int selectedIndex = self.powerOutlets.selectedSegmentIndex;
+    switch (selectedIndex) {
+        case kPowerOutletsMany:
+            self.powerOutletsLabel.text = @"Many";
+            break;
+        case kPowerOutletsAFew:
+            self.powerOutletsLabel.text = @"A Few";
+            break;
+        case kPowerOutletsNone:
+            self.powerOutletsLabel.text = @"None";
+            break;
+        default:
+            self.powerOutletsLabel.text = @"None";
+            break;
+    }
 }
 
 #pragma mark - View lifecycle

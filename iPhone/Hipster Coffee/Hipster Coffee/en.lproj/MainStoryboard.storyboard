@@ -212,7 +212,7 @@
                                                         <action selector="powerOutletsValueChanged:" destination="L0T-ai-XUH" eventType="valueChanged" id="EjS-Qz-o5D"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Outlets Label" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZpW-dX-yGo">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZpW-dX-yGo">
                                                     <rect key="frame" x="165" y="11" width="135" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
