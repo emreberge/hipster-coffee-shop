@@ -40,6 +40,7 @@
 {
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setNeedsDisplay];
+    [super viewWillAppear:animated];
 }
 
 # pragma mark - Action
