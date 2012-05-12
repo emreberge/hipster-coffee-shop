@@ -1,20 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+
 /*
- {
-    venues: [
-        {
-            latitude: 34.2341
-            longitude: 43.234
-            name: "Hipster Coffee Shop"
-        },
-        {
-            latitude: 34.2341
-            longitude: 43.234
-            name: "Hipster Coffee Shop"
-        },
-    ]
- }
+ * See ExampleVenueList.json for example
  */
 @interface Venue : NSObject <MKAnnotation>
 
@@ -22,4 +10,12 @@
 - (id) initWithJSON:(id) venueJson;
 
 + (NSArray *) venuesFromJson:(id) json;
+
+@property(nonatomic, strong) id venueJson;
+
+@property (nonatomic, strong) NSString *wifiSSID;
+@property (nonatomic, strong) NSString *wifiPassword;
+@property (nonatomic, strong) NSString *coffeePrice;
+@property (nonatomic, strong) NSString *powerOutlets;
+
 @end

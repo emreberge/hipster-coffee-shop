@@ -1,7 +1,7 @@
 #import "Venue.h"
 
 @interface Venue()
-@property(nonatomic, strong) id venueJson;
+- (NSString *) valueForKey:(NSString *)key or:(NSString *) defaultValue;
 @end
 
 
@@ -15,6 +15,49 @@
         self.venueJson = venueJson;
     }
     return self;
+}
+
+- (NSString *)wifiSSID
+{
+    return [self valueForKey:@"wifi_ssid" or:@""];
+}
+- (NSString *)wifiPassword
+{
+    return [self valueForKey:@"wifi_password" or:@""];
+}
+- (NSString *)coffeePrice
+{
+    return [self valueForKey:@"coffee_price" or:@""];
+}
+- (NSString *)powerOutlets
+{
+    return [self valueForKey:@"power_outlets" or:@"None"];
+}
+
+- (NSString *) valueForKey:(NSString *)key or:(NSString *) defaultValue
+{
+    NSString *value = [self.venueJson objectForKey:key];
+    if (!value) {
+        value = @"";
+    }
+    return value;
+}
+
+- (void)setWifiSSID:(NSString *)wifiSSID
+{
+    [self.venueJson setObject:wifiSSID forKey:@"wifi_ssid"];
+}
+- (void)setWifiPassword:(NSString *)wifiPassword
+{
+    [self.venueJson setObject:wifiPassword forKey:@"wifi_password"];
+}
+- (void)setCoffeePrice:(NSString *)coffeePrice
+{
+    [self.venueJson setObject:coffeePrice forKey:@"coffee_price"];
+}
+- (void)setPowerOutlets:(NSString *)powerOutlets
+{
+    [self.venueJson setObject:powerOutlets forKey:@"power_outlets"];
 }
 
 # pragma mark - MKAnnotation properties
