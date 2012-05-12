@@ -1,6 +1,9 @@
 #import <UIKit/UIKit.h>
+#import "Venue.h"
 
 @interface VenueViewController : UITableViewController
+
+@property (strong, nonatomic) Venue *venue;
 
 #pragma mark - State
 @property (nonatomic) BOOL editModeEnabled;

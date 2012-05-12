@@ -1,11 +1,8 @@
 #import "VenueViewController.h"
 
-#define kPowerOutletsMany 0
-#define kPowerOutletsAFew 1
-#define kPowerOutletsNone 2
+#define kPowerOutletChoices [NSArray arrayWithObjects:@"Many", @"A Few", @"None", nil]
 
 @interface VenueViewController ()
-
 @end
 
 @implementation VenueViewController
@@ -19,12 +16,42 @@
 @synthesize powerOutlets = _powerOutlets;
 @synthesize powerOutletsLabel = _powerOutletsLabel;
 
+@synthesize venue = _venue;
+
+#pragma mark -
+
+- (Venue *)venue
+{
+    if (!_venue) {
+        self.venue = [[Venue alloc] init];
+    }
+    return _venue;
+}
+- (void)setVenue:(Venue *)venue
+{
+    _venue = venue;
+    
+    self.wifiSSID.text = venue.wifiSSID;
+    self.wifiPassword.text = venue.wifiPassword;
+    self.coffeePrice.text = venue.coffeePrice;
+
+    self.powerOutletsLabel.text = venue.powerOutlets;
+    self.powerOutlets.selectedSegmentIndex = [kPowerOutletChoices indexOfObject:venue.powerOutlets];
+}
+
 
 #pragma mark - Edit mode logic
 
 - (void)setDefaultState
 {
     self.editModeEnabled = NO;
+    
+    Venue *v = [[Venue alloc] init];
+    v.wifiSSID = @"eduroam";
+    v.wifiPassword = @"secret";
+    v.coffeePrice = @"4711";
+    v.powerOutlets = @"A Few";
+    self.venue = v;
 }
 
 - (void)updateControlsEditableState
@@ -64,22 +91,10 @@
 }
 
 - (IBAction)powerOutletsValueChanged:(id)sender {
-    int selectedIndex = self.powerOutlets.selectedSegmentIndex;
-    switch (selectedIndex) {
-        case kPowerOutletsMany:
-            self.powerOutletsLabel.text = @"Many";
-            break;
-        case kPowerOutletsAFew:
-            self.powerOutletsLabel.text = @"A Few";
-            break;
-        case kPowerOutletsNone:
-            self.powerOutletsLabel.text = @"None";
-            break;
-        default:
-            self.powerOutletsLabel.text = @"None";
-            break;
-    }
+    int selectedIndex = self.powerOutlets.selectedSegmentIndex;    
+    self.powerOutletsLabel.text = [kPowerOutletChoices objectAtIndex:selectedIndex];
 }
+
 
 #pragma mark - View lifecycle
 
@@ -100,60 +115,5 @@
     [super viewDidUnload];
 }
 
-
-#pragma mark - Table view data source
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

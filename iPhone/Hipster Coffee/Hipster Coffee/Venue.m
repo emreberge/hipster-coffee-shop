@@ -9,6 +9,10 @@
 
 @synthesize venueJson=_venueJson;
 
+- (id)init {
+    return [self initWithJSON:[NSMutableDictionary dictionary]];
+}
+
 - (id)initWithJSON:(id)venueJson
 {
     if(self = [super init]) {
