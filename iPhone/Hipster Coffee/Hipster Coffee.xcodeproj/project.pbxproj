@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31AC601155E4850000708CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31AC600155E4850000708CE /* MapKit.framework */; };
 		C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
 		C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
 		C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB190155E37410004452D /* CoreGraphics.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C31AC600155E4850000708CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C3EBB188155E37410004452D /* Hipster Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hipster Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBB18C155E37410004452D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3EBB18E155E37410004452D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31AC601155E4850000708CE /* MapKit.framework in Frameworks */,
 				C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */,
 				C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */,
 				C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +103,7 @@
 		C3EBB18B155E37410004452D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C31AC600155E4850000708CE /* MapKit.framework */,
 				C3EBB18C155E37410004452D /* UIKit.framework */,
 				C3EBB18E155E37410004452D /* Foundation.framework */,
 				C3EBB190155E37410004452D /* CoreGraphics.framework */,
