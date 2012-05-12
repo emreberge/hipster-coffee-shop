@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aqj-Da-4vi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aqj-Da-4vi">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--Map View Controller-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -16,6 +18,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ZLp-9q-dRJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="WOj-um-fId"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -29,11 +34,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="ZLp-9q-dRJ" id="SHQ-Yd-KhI"/>
+                        <segue destination="L0T-ai-XUH" kind="push" identifier="ShowVenueView" id="H95-z9-Y05"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="619" y="167"/>
         </scene>
+        <!--Add Venue Table View Controller-->
         <scene sceneID="sKW-4S-5vZ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6i-WH-afR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,8 +81,9 @@
                     <navigationItem key="navigationItem" id="pqk-Wk-hBK"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1148" y="8"/>
+            <point key="canvasLocation" x="1156" y="-282"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="Z00-cS-tzf">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIv-lJ-OYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -93,6 +101,7 @@
             </objects>
             <point key="canvasLocation" x="186" y="168"/>
         </scene>
+        <!--Venue View Controller-->
         <scene sceneID="keG-lW-AQM">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2i-G0-cZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,7 +257,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1612" y="11"/>
+            <point key="canvasLocation" x="1704" y="167"/>
         </scene>
     </scenes>
     <classes>
@@ -278,4 +287,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="H95-z9-Y05"/>
+    </inferredMetricsTieBreakers>
 </document>

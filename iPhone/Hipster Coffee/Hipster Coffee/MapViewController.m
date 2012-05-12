@@ -95,6 +95,11 @@
     }];
 }
 
+- (IBAction) showDetailsOfSelectedVenue
+{
+    [self performSegueWithIdentifier:@"ShowVenueView" sender:self];
+}
+
 - (IBAction)animateToUserLocation
 {
     [self.mapView setRegion:MKCoordinateRegionMake(self.locationManager.location.coordinate, MKCoordinateSpanMake(0.01,0.01)) animated:YES];
@@ -111,6 +116,26 @@
 }
 
 # pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *) mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKPinAnnotationView *pinAnnotation = nil;
+    if(annotation != mapView.userLocation) 
+    {
+        static NSString *defaultPinID = @"Pin";
+        pinAnnotation = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+        if ( pinAnnotation == nil ) {
+            pinAnnotation = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID];
+            pinAnnotation.canShowCallout = YES;
+            pinAnnotation.pinColor = MKPinAnnotationColorGreen;
+            UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            pinAnnotation.rightCalloutAccessoryView = infoButton;
+            [infoButton addTarget:self action:@selector(showDetailsOfSelectedVenue) forControlEvents:UIControlEventTouchUpInside];
+        }
+    }
+    
+    return pinAnnotation;
+}
 
 # pragma mark - CLLocationManagerDelegate
 
