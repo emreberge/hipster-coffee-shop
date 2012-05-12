@@ -5,30 +5,53 @@
 @end
 
 @implementation VenueViewController
-@synthesize saveButton;
-@synthesize wifiSSID;
-@synthesize wifiPassword;
-@synthesize coffeePrice;
-@synthesize powerOutlets;
 
-- (id)initWithStyle:(UITableViewStyle)style
+@synthesize editModeEnabled = _editModeEnabled;
+
+@synthesize saveButton = _saveButton;
+@synthesize wifiSSID = _wifiSSID;
+@synthesize wifiPassword = _wifiPassword;
+@synthesize coffeePrice = _coffeePrice;
+@synthesize powerOutlets = _powerOutlets;
+@synthesize powerOutletsLabel = _powerOutletsLabel;
+
+#pragma mark - Toggling edit mode
+
+- (void)setDefaultState
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    self.editModeEnabled = NO;
 }
+
+- (void)updateControlsEditableState
+{
+    self.wifiSSID.enabled = self.editModeEnabled;
+    self.wifiPassword.enabled = self.editModeEnabled;
+    self.coffeePrice.enabled = self.editModeEnabled;
+    
+    self.powerOutlets.hidden = !self.editModeEnabled;
+    self.powerOutletsLabel.hidden = self.editModeEnabled;
+}
+
+- (void)setEditModeEnabled:(BOOL)editModeEnabled
+{
+    _editModeEnabled = editModeEnabled;
+    [self updateControlsEditableState];
+}
+
+
+#pragma mark - Actions
+
+- (IBAction)saveButtonPressed:(id)sender {
+    self.editModeEnabled = !self.editModeEnabled;
+}
+
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setDefaultState];
 }
 
 - (void)viewDidUnload
@@ -38,15 +61,10 @@
     [self setCoffeePrice:nil];
     [self setPowerOutlets:nil];
     [self setSaveButton:nil];
+    [self setPowerOutletsLabel:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 
 #pragma mark - Table view data source
 
@@ -88,6 +106,7 @@
     return YES;
 }
 */
+
 
 #pragma mark - Table view delegate
 
