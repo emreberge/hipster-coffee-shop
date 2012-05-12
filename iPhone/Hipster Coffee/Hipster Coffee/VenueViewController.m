@@ -92,11 +92,9 @@
     self.powerOutletsLabel.text = self.venue.powerOutlets;
     self.powerOutlets.selectedSegmentIndex = [kPowerOutletChoices indexOfObject:self.venue.powerOutlets];
     self.title = self.venue.title;
-    /*
     [[BackEnd sharedInstance] processImagesForVenue:self.venue withBlock:^(NSArray *imageViews){
         self.imageViews = imageViews;
     }];
-     */
 }
 
 #pragma mark - Image update
@@ -108,6 +106,15 @@
 {
     // setup each frame to a default height and width, it will be properly placed when we call "updateScrollList"
     
+    for (UIImageView *view in self.imageScrollView.subviews)
+	{
+		if ([view isKindOfClass:[UIImageView class]])
+		{
+            [view removeFromSuperview];
+		}
+	}
+
+    
     for (int i = 0; i < [images count]; i++) {
         UIImageView *imageView = [images objectAtIndex:i];
 		CGRect rect = imageView.frame;
@@ -115,6 +122,7 @@
 		rect.size.width = kScrollObjWidth;
 		imageView.frame = rect;
         imageView.tag = i+1;
+        imageView.contentMode = UIViewContentModeScaleAspectFit | UIViewContentModeCenter;
         [self.imageScrollView addSubview:imageView];
     }
     
