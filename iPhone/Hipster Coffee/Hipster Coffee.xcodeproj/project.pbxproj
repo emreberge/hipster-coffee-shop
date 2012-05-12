@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C31AC601155E4850000708CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31AC600155E4850000708CE /* MapKit.framework */; };
 		C31AC604155E4881000708CE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC603155E4881000708CE /* MapViewController.m */; };
+		C31AC609155E4AF4000708CE /* AddVenueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AC608155E4AF4000708CE /* AddVenueTableViewController.m */; };
 		C3EBB18D155E37410004452D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18C155E37410004452D /* UIKit.framework */; };
 		C3EBB18F155E37410004452D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB18E155E37410004452D /* Foundation.framework */; };
 		C3EBB191155E37410004452D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EBB190155E37410004452D /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 		C31AC600155E4850000708CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C31AC602155E4881000708CE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C31AC603155E4881000708CE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		C31AC607155E4AF4000708CE /* AddVenueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVenueTableViewController.h; sourceTree = "<group>"; };
+		C31AC608155E4AF4000708CE /* AddVenueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVenueTableViewController.m; sourceTree = "<group>"; };
 		C3EBB188155E37410004452D /* Hipster Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hipster Coffee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBB18C155E37410004452D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3EBB18E155E37410004452D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,15 @@
 			name = "Map View";
 			sourceTree = "<group>";
 		};
+		C31AC606155E4A8F000708CE /* Add Venue List View */ = {
+			isa = PBXGroup;
+			children = (
+				C31AC607155E4AF4000708CE /* AddVenueTableViewController.h */,
+				C31AC608155E4AF4000708CE /* AddVenueTableViewController.m */,
+			);
+			name = "Add Venue List View";
+			sourceTree = "<group>";
+		};
 		C3EBB17D155E37410004452D = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 				C3EBB19C155E37410004452D /* AppDelegate.m */,
 				C3EBB19E155E37410004452D /* MainStoryboard.storyboard */,
 				C31AC605155E4885000708CE /* Map View */,
+				C31AC606155E4A8F000708CE /* Add Venue List View */,
 			);
 			path = "Hipster Coffee";
 			sourceTree = "<group>";
@@ -274,6 +287,7 @@
 				C3EBB199155E37410004452D /* main.m in Sources */,
 				C3EBB19D155E37410004452D /* AppDelegate.m in Sources */,
 				C31AC604155E4881000708CE /* MapViewController.m in Sources */,
+				C31AC609155E4AF4000708CE /* AddVenueTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
