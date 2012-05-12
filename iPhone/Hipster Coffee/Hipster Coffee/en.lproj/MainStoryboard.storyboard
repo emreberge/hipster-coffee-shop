@@ -128,7 +128,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="right" minimumFontSize="17" id="3uo-N2-SjT">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Interwebs" textAlignment="right" minimumFontSize="17" id="3uo-N2-SjT">
                                                     <rect key="frame" x="150" y="6" width="150" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,7 +152,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="right" minimumFontSize="17" id="CbK-lG-MhE">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="secret" textAlignment="right" minimumFontSize="17" id="CbK-lG-MhE">
                                                     <rect key="frame" x="142" y="6" width="158" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
@@ -176,7 +176,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="right" minimumFontSize="17" id="oTc-BA-j6l">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="35" textAlignment="right" minimumFontSize="17" id="oTc-BA-j6l">
                                                     <rect key="frame" x="150" y="6" width="150" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -208,6 +208,9 @@
                                                         <segment title="A Few"/>
                                                         <segment title="None"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="powerOutletsValueChanged:" destination="L0T-ai-XUH" eventType="valueChanged" id="EjS-Qz-o5D"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Outlets Label" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZpW-dX-yGo">
                                                     <rect key="frame" x="165" y="11" width="135" height="21"/>
@@ -229,9 +232,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="q04-Ee-LbP">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="oG9-x3-ukB">
+                        <barButtonItem key="rightBarButtonItem" title="Toggle Edit Mode" id="1zT-lk-cWJ">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="L0T-ai-XUH" id="xmp-kE-EcN"/>
+                                <action selector="toggleEditModeButtonPressed:" destination="L0T-ai-XUH" id="dro-wC-8uE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -239,7 +242,7 @@
                         <outlet property="coffeePrice" destination="oTc-BA-j6l" id="NFr-VK-KMk"/>
                         <outlet property="powerOutlets" destination="AfF-33-wf0" id="i6F-va-UHI"/>
                         <outlet property="powerOutletsLabel" destination="ZpW-dX-yGo" id="nbf-KG-8Az"/>
-                        <outlet property="saveButton" destination="oG9-x3-ukB" id="eaz-dB-yi2"/>
+                        <outlet property="toggleEditModeButton" destination="1zT-lk-cWJ" id="vuH-oU-DX1"/>
                         <outlet property="wifiPassword" destination="CbK-lG-MhE" id="JjL-oC-j7f"/>
                         <outlet property="wifiSSID" destination="3uo-N2-SjT" id="i1a-uA-G6D"/>
                     </connections>
@@ -248,6 +251,28 @@
             <point key="canvasLocation" x="1612" y="11"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddVenueTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddVenueTableViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="VenueViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VenueViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coffeePrice" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="powerOutlets" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="powerOutletsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toggleEditModeButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="wifiPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="wifiSSID" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

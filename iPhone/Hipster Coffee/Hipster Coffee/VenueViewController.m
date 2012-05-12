@@ -8,14 +8,15 @@
 
 @synthesize editModeEnabled = _editModeEnabled;
 
-@synthesize saveButton = _saveButton;
+@synthesize toggleEditModeButton = _toggleEditModeButton;
 @synthesize wifiSSID = _wifiSSID;
 @synthesize wifiPassword = _wifiPassword;
 @synthesize coffeePrice = _coffeePrice;
 @synthesize powerOutlets = _powerOutlets;
 @synthesize powerOutletsLabel = _powerOutletsLabel;
 
-#pragma mark - Toggling edit mode
+
+#pragma mark - Edit mode logic
 
 - (void)setDefaultState
 {
@@ -24,12 +25,19 @@
 
 - (void)updateControlsEditableState
 {
+    if (self.editModeEnabled) {
+        self.toggleEditModeButton.title = @"Save";
+    } else {
+        self.toggleEditModeButton.title = @"Edit";
+    }
+    
     self.wifiSSID.enabled = self.editModeEnabled;
     self.wifiPassword.enabled = self.editModeEnabled;
     self.coffeePrice.enabled = self.editModeEnabled;
-    
-    self.powerOutlets.hidden = !self.editModeEnabled;
-    self.powerOutletsLabel.hidden = self.editModeEnabled;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.powerOutlets.alpha = self.editModeEnabled;
+        self.powerOutletsLabel.alpha = !self.editModeEnabled;
+    }];
 }
 
 - (void)setEditModeEnabled:(BOOL)editModeEnabled
@@ -38,13 +46,22 @@
     [self updateControlsEditableState];
 }
 
-
-#pragma mark - Actions
-
-- (IBAction)saveButtonPressed:(id)sender {
+- (void)toggleEditMode
+{    
     self.editModeEnabled = !self.editModeEnabled;
+    [self.wifiSSID becomeFirstResponder];
 }
 
+
+#pragma mark - UI Actions
+
+- (IBAction)toggleEditModeButtonPressed:(id)sender {
+    [self toggleEditMode];
+}
+
+- (IBAction)powerOutletsValueChanged:(id)sender {
+    //self.powerOutletsLabel.text = self.powerOutlets.
+}
 
 #pragma mark - View lifecycle
 
@@ -60,8 +77,8 @@
     [self setWifiPassword:nil];
     [self setCoffeePrice:nil];
     [self setPowerOutlets:nil];
-    [self setSaveButton:nil];
     [self setPowerOutletsLabel:nil];
+    [self setToggleEditModeButton:nil];
     [super viewDidUnload];
 }
 
