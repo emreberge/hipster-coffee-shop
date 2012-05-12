@@ -3,24 +3,14 @@
 #import "VenueViewController.h"
 
 @interface AddVenueTableViewController ()
-@property (strong, nonatomic) BackEnd *backEnd;
 @property (strong, nonatomic) NSArray *venues;
 - (void) updateVenuesForCurrentLocation;
 @end
 
 @implementation AddVenueTableViewController
 
-@synthesize backEnd=_backEnd;
 @synthesize venues=_venues;
 @synthesize location=_location;
-
-- (BackEnd *)backEnd
-{
-    if(!_backEnd) {
-        _backEnd = [[BackEnd alloc] init];
-    }
-    return _backEnd;
-}
 
 - (void)setLocation:(CLLocation *)location
 {
@@ -46,7 +36,7 @@
 - (void) updateVenuesForCurrentLocation
 {
     if(self.location) {
-        [self.backEnd processNearbyVenuesAtLocation:self.location withBlock:^(NSArray *venues){
+        [[BackEnd sharedInstance] processNearbyVenuesAtLocation:self.location withBlock:^(NSArray *venues){
             self.venues = venues;
         }];
     }

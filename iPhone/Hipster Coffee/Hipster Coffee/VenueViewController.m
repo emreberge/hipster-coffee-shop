@@ -1,4 +1,5 @@
 #import "VenueViewController.h"
+#import "BackEnd.h"
 
 #define kPowerOutletChoices [NSArray arrayWithObjects:@"Many", @"A Few", @"None", nil]
 
@@ -70,7 +71,7 @@
 
 - (IBAction)saveChangesToVenue
 {
-    //[self.backEnd updateVenue:self.venue];
+    [[BackEnd sharedInstance] uppdateVenue:self.venue];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

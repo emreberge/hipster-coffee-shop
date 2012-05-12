@@ -9,7 +9,6 @@
 
 @interface MapViewController ()
 @property (strong, nonatomic) CLLocationManager * locationManager;
-@property (strong, nonatomic) BackEnd *backEnd;
 - (void) initLocationManager;
 - (void) replaceMapAnnotationsWith:(NSArray *) mapAnnotations;
 @end
@@ -17,7 +16,6 @@
 @implementation MapViewController
 @synthesize mapView=_mapView;
 @synthesize locationManager=_locationManager;
-@synthesize backEnd=_backEnd;
 
 - (CLLocationManager *)locationManager
 {
@@ -25,14 +23,6 @@
         _locationManager = [[CLLocationManager alloc] init];
     }
     return _locationManager;
-}
-
-- (BackEnd *)backEnd
-{
-    if(!_backEnd) {
-        _backEnd = [[BackEnd alloc] init];
-    }
-    return _backEnd;
 }
 
 # pragma mark - View Controller lifecycle
@@ -64,7 +54,6 @@
 {
     [self setMapView:nil];
     [self setLocationManager:nil];
-    [self setBackEnd:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -98,7 +87,7 @@
 - (IBAction)updateVenues
 {
     
-    [self.backEnd processVenueListForLocation:self.locationManager.location withBlock:^(NSArray *venues){
+    [[BackEnd sharedInstance] processVenueListForLocation:self.locationManager.location withBlock:^(NSArray *venues){
         [self replaceMapAnnotationsWith:venues];
     }];
 }

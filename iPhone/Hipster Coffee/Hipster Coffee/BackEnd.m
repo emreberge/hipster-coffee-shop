@@ -1,5 +1,4 @@
 #import "BackEnd.h"
-#import "Venue.h"
 
 @implementation BackEnd
 
@@ -25,6 +24,22 @@
     block([self exampleVenues]);
     NSLog(@"processNearbyVenuesAtLocation");
 
+}
+
+- (void)uppdateVenue:(Venue *) venue;
+{
+    NSLog(@"updateVenue");
+}
+
++ (BackEnd *)sharedInstance
+{
+    static BackEnd *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[BackEnd alloc] init];
+        // Do any other initialisation stuff here
+    });
+    return sharedInstance;
 }
 
 @end
