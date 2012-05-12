@@ -6,10 +6,10 @@
                "longitude": 18.081099755570595,
                "name": "Il Caffè",
                "address": "Södermannagatan 23", 
-               "wifi_ssid": "", 
-               "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "wifi_ssid": "ilcaffenet", 
+               "wifi_password": "asdf543", 
+               "coffee_price": "43", 
+               "power_outlets": "Many"
                },
                {
                "foursquare_id": "4b16f58ff964a52023c023e3",
@@ -17,10 +17,10 @@
                "longitude": 18.068394,
                "name": "Café Saturnus",
                "address": "Eriksbergsgatan 6", 
-               "wifi_ssid": "", 
-               "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "wifi_ssid": "SaturnusKunder", 
+               "wifi_password": "marathon", 
+               "coffee_price": "37", 
+               "power_outlets": "None"
                },
                {
                "foursquare_id": "4b0d67fbf964a520a54723e3",
@@ -30,8 +30,8 @@
                "address": "Birger jarlsgatan 36", 
                "wifi_ssid": "", 
                "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "coffee_price": "24", 
+               "power_outlets": "A Few"
                },
                {
                "foursquare_id": "4b0014e5f964a520ad3a22e3",
@@ -41,8 +41,8 @@
                "address": "Bergsgatan 17", 
                "wifi_ssid": "", 
                "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "coffee_price": "32", 
+               "power_outlets": "A Few"
                },
                {
                "foursquare_id": "4cc81c297722bfb71c65a2fa",
@@ -53,7 +53,7 @@
                "wifi_ssid": "", 
                "wifi_password": "", 
                "coffee_price": "", 
-               "power_outlets": ""
+               "power_outlets": "None"
                },
                {
                "foursquare_id": "4bae0bb4f964a520407e3be3",
@@ -63,8 +63,8 @@
                "address": "Almlöfsgatan 3", 
                "wifi_ssid": "", 
                "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "coffee_price": "25", 
+               "power_outlets": "Many"
                },
                {
                "foursquare_id": "4b4f5698f964a520f60127e3",
@@ -75,7 +75,7 @@
                "wifi_ssid": "", 
                "wifi_password": "", 
                "coffee_price": "", 
-               "power_outlets": ""
+               "power_outlets": "Many"
                },
                {
                "foursquare_id": "4adcdaecf964a5200f5a21e3",
@@ -85,8 +85,8 @@
                "address": "Västerlånggatan 18", 
                "wifi_ssid": "", 
                "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "coffee_price": "32", 
+               "power_outlets": "A Few"
                },
                {
                "foursquare_id": "4bb9ec097421a5933127c340",
@@ -96,8 +96,8 @@
                "address": "Bellmansgatan 26", 
                "wifi_ssid": "", 
                "wifi_password": "", 
-               "coffee_price": "", 
-               "power_outlets": ""
+               "coffee_price": "26", 
+               "power_outlets": "None"
                }
                ]
 }
