@@ -42,8 +42,9 @@
 
         int imageCount = [[[JSON objectForKey:@"stats"] objectForKey:@"photoCount"] intValue];
         
-        
-        id imageListJSON = [[[[JSON objectForKey:@"photos"] objectForKey:@"groups"] objectAtIndex:1] objectForKey:@"items"];
+        BOOL has2Index = [[[JSON objectForKey:@"photos"] objectForKey:@"groups"] count] == 2;
+        int index = has2Index? 1:0; 
+        id imageListJSON = [[[[JSON objectForKey:@"photos"] objectForKey:@"groups"] objectAtIndex:index] objectForKey:@"items"];
         NSLog(@"Venues: %@", JSON);
 
         
